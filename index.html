@@ -1,0 +1,2353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makrim Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+
+    <!-- Vertical Navigation -->
+    <nav class="side-nav">
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="home">
+        <!-- Left Section -->
+        <div class="left-section">
+            <div class="logo">
+                <!-- Logo container with gear effect -->
+                <div class="gear-logo">
+                    <img src="logo.png" alt="Makrim Logo">
+                </div>
+            </div>
+            <div class="text-content">
+                <h1>Makrim Enterprises</h1>
+                <div class="separator"></div>
+                <p class="tagline">Building Excellence, Engineering Tomorrow.</p>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="image-overlay"></div>
+        </div>
+    </div>
+  
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        overflow-x: hidden;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    .container {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Left Section Styles */
+    .left-section {
+        width: 50%;
+        background: linear-gradient(135deg, #000 0%, #222 100%);
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .left-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, transparent 20%, #000 70%);
+        opacity: 0.7;
+    }
+
+    .logo {
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .gear-logo {
+        width: 350px;
+        height: 350px;
+        position: relative;
+        animation: rotate 20s linear infinite;
+        filter: drop-shadow(0 0 15px rgba(64, 224, 208, 0.5));
+        transition: all 0.5s ease;
+    }
+
+    .gear-logo:hover {
+        filter: drop-shadow(0 0 25px rgba(64, 224, 208, 0.8));
+        transform: scale(1.05) rotate(10deg);
+    }
+
+    .gear-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .text-content {
+        text-align: center;
+        color: white;
+        position: relative;
+        z-index: 2;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        animation: fadeInDown 1.5s;
+    }
+
+    .separator {
+        width: 150px;
+        height: 3px;
+        background: linear-gradient(90deg, #40E0D0, #6A5ACD);
+        margin: 25px auto;
+        border-radius: 3px;
+        box-shadow: 0 2px 10px rgba(106, 90, 205, 0.5);
+        animation: width-expand 2s ease;
+    }
+
+    @keyframes width-expand {
+        from { width: 0; }
+        to { width: 150px; }
+    }
+
+    .tagline {
+        color: #DAA520;
+        font-size: 1.4em;
+        font-style: italic;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        animation: fadeInUp 1.5s;
+    }
+
+    /* Right Section Styles */
+    .right-section {
+        width: 50%;
+        background-image: url('home.jpeg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        transition: all 0.5s ease;
+    }
+
+    .right-section:hover .image-overlay {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        transition: all 0.5s ease;
+    }
+
+    /* Logo Rotation Animation */
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Services Section */
+    .services-section {
+        background: linear-gradient(to bottom, #f9f9f9, #e9e9e9);
+        padding: 80px 50px;
+        color: #333;
+        text-align: center;
+        position: relative;
+    }
+
+    .services-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('pattern.png');
+        opacity: 0.05;
+        pointer-events: none;
+    }
+
+    .services-intro {
+        max-width: 800px;
+        margin: 0 auto 60px;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .service-item {
+        background-color: white;
+        padding: 35px;
+        border-radius: 10px;
+        text-align: left;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 3px solid transparent;
+    }
+
+    .service-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        border-bottom: 3px solid #5ecece;
+    }
+
+    .service-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 0;
+        background: #5ecece;
+        transition: height 0.3s ease;
+    }
+
+    .service-item:hover::before {
+        height: 100%;
+    }
+
+    .service-icon {
+        background: linear-gradient(135deg, #5ecece 0%, #4ca2a2 100%);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+        box-shadow: 0 5px 15px rgba(94, 206, 206, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .service-item:hover .service-icon {
+        transform: scale(1.1) rotate(10deg);
+    }
+
+    .service-item h3 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        position: relative;
+        padding-left: 15px;
+        transition: all 0.3s ease;
+    }
+
+    .service-item:hover h3 {
+        padding-left: 20px;
+        color: #5ecece;
+    }
+
+    .service-item p {
+        color: #666;
+        line-height: 1.7;
+        font-size: 1rem;
+        padding-left: 15px;
+    }
+
+    .services-cta {
+        margin: 60px 0;
+        padding: 30px;
+        background: linear-gradient(135deg, #002642 0%, #004166 100%);
+        border-radius: 10px;
+        color: white;
+        box-shadow: 0 10px 30px rgba(0, 38, 66, 0.2);
+    }
+
+    .services-cta p {
+        margin: 10px 0;
+        font-size: 1.3rem;
+    }
+
+    .services-cta p:first-child {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #5ecece;
+    }
+
+    /* Portfolio Section */
+    .portfolio-section {
+        background: linear-gradient(135deg, #002642 0%, #001a2e 100%);
+        padding: 80px 50px;
+        color: white;
+        position: relative;
+    }
+
+    .portfolio-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('pattern-dark.png');
+        opacity: 0.1;
+        pointer-events: none;
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .portfolio-item {
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .portfolio-img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: all 0.5s ease;
+    }
+
+    .portfolio-item:hover .portfolio-img {
+        transform: scale(1.1);
+    }
+
+    .portfolio-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: rgba(0,0,0,0.7);
+        font-size: 1.1rem;
+        font-weight: bold;
+        transform: translateY(0);
+        transition: all 0.3s ease;
+        opacity: 0.9;
+    }
+
+    .portfolio-item:hover .portfolio-title {
+        background: rgba(0,0,0,0.85);
+        padding-bottom: 25px;
+        color: #5ecece;
+        opacity: 1;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+        background: linear-gradient(135deg, #222 0%, #333 100%);
+        padding: 80px 50px;
+        color: white;
+        text-align: center;
+    }
+
+    .testimonials-title {
+        color: #5ecece;
+        font-size: 2.5rem;
+        margin-bottom: 60px;
+        font-family: 'Playfair Display', serif;
+        position: relative;
+    }
+
+    .testimonials-title::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: #5ecece;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .testimonial-item {
+        text-align: left;
+        padding: 30px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .testimonial-item:hover {
+        background: rgba(255,255,255,0.1);
+        transform: translateY(-10px);
+    }
+
+    .testimonial-divider {
+        width: 40px;
+        height: 3px;
+        background-color: #5ecece;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .testimonial-item:hover .testimonial-divider {
+        width: 60px;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .testimonial-text::before {
+        content: '"';
+        font-size: 4rem;
+        position: absolute;
+        top: -30px;
+        left: -10px;
+        color: rgba(94, 206, 206, 0.2);
+        font-family: 'Playfair Display', serif;
+    }
+
+    .testimonial-author {
+        color: #5ecece;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    /* Footer */
+    .footer {
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    .footer-container {
+        display: flex;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .footer-content {
+        width: 50%;
+        background-color: #002642;
+        color: #d9c9a3;
+        padding: 60px 50px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .footer-image {
+        width: 50%;
+        background-image: url('excavator-construction.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .footer-heading {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        font-weight: normal;
+        color: #d9c9a3;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    .footer-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    
+    .company-name {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+    
+    .company-address p, .company-contact p {
+        margin: 5px 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .footer-tagline {
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 90%;
+        margin-top: 20px;
+    }
+    
+    @media (max-width: 992px) {
+        .footer-container {
+            flex-direction: column;
+        }
+        
+        .footer-content, .footer-image {
+            width: 100%;
+        }
+        
+        .footer-image {
+            height: 300px;
+        }
+        
+        .footer-info {
+            flex-direction: column;
+        }
+        
+        .company-contact {
+            margin-top: 20px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .footer-content {
+            padding: 40px 30px;
+        }
+        
+        .footer-heading {
+            font-size: 2rem;
+        }
+    }
+</style>
+
+<!-- About Us Section -->
+<section class="about-section" id="about">
+    <div class="about-container">
+        <div class="about-image-container" data-aos="fade-right" data-aos-duration="1000">
+            <div class="image-frame">
+                <img src="about.jpeg" alt="Construction site with heavy machinery" class="about-image">
+                <div class="image-overlay-effect"></div>
+            </div>
+            <a href="#portfolio" class="portfolio-btn" data-aos="fade-up" data-aos-delay="600">
+                <span>CHECK OUR PORTFOLIO</span>
+                <div class="btn-hover-effect"></div>
+            </a>
+        </div>
+        
+        <div class="about-content" data-aos="fade-left" data-aos-duration="1000">
+            <div class="section-title-container">
+                <div class="title-accent-line" data-aos="width-expand" data-aos-delay="200"></div>
+                <h2 class="about-title" data-aos="fade-up" data-aos-delay="300">About Us</h2>
+            </div>
+            
+            <div class="about-text-container">
+                <p class="about-text" data-aos="fade-up" data-aos-delay="400">
+                    Makrim Enterprises is a trusted name in the civil engineering consulting sector, dedicated to delivering innovative and sustainable solutions for infrastructure and construction projects. With a team of experienced engineers, designers, and project managers, we specialize in providing end-to-end consulting services—from feasibility studies and design to project management and regulatory compliance.
+                </p>
+                <p class="about-text" data-aos="fade-up" data-aos-delay="500">
+                    Our commitment to excellence, cutting-edge technology, and client-focused approach ensures that every project is executed with precision, efficiency, and environmental responsibility. Whether it's designing resilient structures, planning urban developments, or managing complex infrastructure projects, Makrim Enterprises is your partner in building a better future.
+                </p>
+            </div>
+            
+            <div class="about-stats" data-aos="fade-up" data-aos-delay="600">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="200">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Expert Engineers</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* About Section Styling */
+.about-section {
+    padding: 120px 50px;
+    background: linear-gradient(135deg, #f9f9f9 0%, #e9e9e9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(64, 224, 208, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.about-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image-container {
+    flex: 1;
+    position: relative;
+}
+
+.image-frame {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: perspective(1000px) rotateY(5deg);
+    transition: all 0.5s ease;
+}
+
+.image-frame:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.image-frame:hover .about-image {
+    transform: scale(1.05);
+}
+
+.image-overlay-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 38, 66, 0.2) 0%, rgba(64, 224, 208, 0.2) 100%);
+    transition: all 0.5s ease;
+}
+
+.image-frame:hover .image-overlay-effect {
+    background: linear-gradient(135deg, rgba(0, 38, 66, 0.1) 0%, rgba(64, 224, 208, 0.1) 100%);
+}
+
+.portfolio-btn {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #40E0D0;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    box-shadow: 0 10px 20px rgba(64, 224, 208, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.portfolio-btn:hover {
+    transform: translateX(-50%) translateY(-5px);
+    box-shadow: 0 15px 25px rgba(64, 224, 208, 0.4);
+}
+
+.btn-hover-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s ease;
+}
+
+.portfolio-btn:hover .btn-hover-effect {
+    left: 100%;
+}
+
+.about-content {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.section-title-container {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.title-accent-line {
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, #40E0D0, transparent);
+    margin-bottom: 15px;
+    animation: width-expand 1.5s ease-out forwards;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    color: #002642;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-text {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #40E0D0;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.stat-number::after {
+    content: '+';
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+   
+}
+
+.stat-label {
+    color: #555;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Animation for counting up numbers */
+@keyframes width-expand {
+    from { width: 0; }
+    to { width: 80px; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .about-image-container, .about-content {
+        width: 100%;
+    }
+    
+    .portfolio-btn {
+        position: relative;
+        display: inline-block;
+        margin-top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .about-stats {
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        flex: 1 0 33%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 80px 30px;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .stat-item {
+        flex: 1 0 100%;
+    }
+}
+</style>
+
+<script>
+// Counter animation for statistics
+document.addEventListener('DOMContentLoaded', function() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    // Function to animate counting
+    function animateCounter(el) {
+        const target = parseInt(el.getAttribute('data-count'));
+        const duration = 2000; // 2 seconds
+        const step = target / (duration / 16); // 60fps
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                el.textContent = target;
+                clearInterval(timer);
+            } else {
+                el.textContent = Math.floor(current);
+            }
+        }, 16);
+    }
+    
+    // Intersection Observer to trigger counter when visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    // Observe all stat numbers
+    statNumbers.forEach(stat => {
+        observer.observe(stat);
+    });
+});
+</script>
+
+<!-- Services Section -->
+<section class="services-section" id="services">
+    <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">Our Services</h2>
+        <div class="title-underline">
+            <div class="underline-segment"></div>
+            <div class="underline-dot"></div>
+            <div class="underline-segment"></div>
+        </div>
+        <p class="services-intro" data-aos="fade-up" data-aos-delay="200">
+            Comprehensive Solutions for Every Project.<br>
+            Explore how we can bring your vision to life with precision and innovation.
+        </p>
+    </div>
+    
+    <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3>MATERIAL SPECIALIZATION</h3>
+            <p>Material specialisation involves the in-depth study, selection, and application of specific materials tailored to meet the unique requirements of a project.</p>
+            <div class="service-hover-effect"></div>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3>MATERIAL FORENSIC INVESTIGATION</h3>
+            <p>Materials forensic investigation involves analyzing failed or underperforming materials to determine the cause of failure and prevent future occurrences.</p>
+            <div class="service-hover-effect"></div>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <h3>ASPHALT ANALYSIS & TROUBLESHOOTING</h3>
+            <p>This service focuses on evaluating the quality, performance, and issues related to asphalt used in construction, particularly in roadways and pavements.</p>
+            <div class="service-hover-effect"></div>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <h3>PROJECT MANAGEMENT & SUPERVISION</h3>
+            <p>Overseeing construction projects to ensure quality, timelines, and budgets are met. Providing on-site supervision and coordination between contractors and stakeholders.</p>
+            <div class="service-hover-effect"></div>
+        </div>
+    </div>
+    
+    <!-- Second intro paragraph -->
+    <div class="section-header second-intro" data-aos="fade-up">
+        <p class="services-intro" data-aos="fade-up" data-aos-delay="200">
+            Comprehensive Solutions for Every Project.<br>
+            Explore how we can bring your vision to life with precision and innovation.
+        </p>
+    </div>
+    
+    <!-- Second set of service cards -->
+    <div class="services-grid">
+        <!-- Service 5 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3>TRAINING JUNIOR TECHNOCRATS</h3>
+            <p>A comprehensive program designed to equip young professionals with essential technical skills, industry knowledge, and practical experience to excel in their roles and contribute effectively to their organizations.</p>
+            <div class="service-hover-effect"></div>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3>ADJUDICATION OF MATERIALS LAB RESULTS</h3>
+            <p>A meticulous evaluation process where materials testing outcomes are reviewed, validated, and interpreted by experts to ensure compliance with standards, resolve discrepancies, and provide conclusive findings for further action.</p>
+            <div class="service-hover-effect"></div>
+        </div>
+        
+        <!-- Service 7 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </div>
+            <h3>STATISTICAL ANALYSIS OF LAB RESULTS</h3>
+            <p>A specialized service that involves applying advanced statistical methods to interpret and analyze laboratory data, ensuring accurate, reliable, and actionable insights for research, quality control, or decision-making processes.</p>
+            <div class="service-hover-effect"></div>
+        </div>
+        
+        <!-- Service 8 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <h3>SITE VISUAL INSPECTION</h3>
+            <p>Conducting site evaluations and feasibility studies for proposed projects. Analyzing soil, topography, and environmental conditions. Assessing project viability and providing recommendations.</p>
+            <div class="service-hover-effect"></div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Add styling for the second intro */
+.second-intro {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+</style>
+
+<style>
+
+/* Services Section Styling */
+.services-section {
+    background: linear-gradient(to bottom, #f9f9f9, #e9e9e9);
+    padding: 100px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('pattern.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.title-underline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto 25px;
+}
+
+.underline-segment {
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, transparent, #40E0D0);
+    animation: line-expand 1.5s ease-out forwards;
+}
+
+.underline-segment:last-child {
+    background: linear-gradient(90deg, #40E0D0, transparent);
+}
+
+.underline-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #40E0D0;
+    border-radius: 50%;
+    margin: 0 15px;
+    transform: scale(0);
+    box-shadow: 0 0 15px rgba(64, 224, 208, 0.8);
+    animation: dot-appear 0.5s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+.services-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: white;
+    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background: #40E0D0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    color: white;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(64, 224, 208, 0.3);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 8px 20px rgba(64, 224, 208, 0.5);
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.service-hover-effect {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(64, 224, 208, 0.1) 0%, rgba(64, 224, 208, 0.05) 100%);
+    border-radius: 50%;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+}
+
+.service-card:hover .service-hover-effect {
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Animations */
+@keyframes line-expand {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80px;
+    }
+}
+
+@keyframes dot-appear {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-section {
+        padding: 80px 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .services-intro {
+        font-size: 1rem;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+    }
+}
+</style>
+
+
+<!-- Add this script before the closing body tag -->
+<script>
+    // Initialize AOS (Animate On Scroll)
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    });
+</script>
+
+<div class="portfolio-section" id="portfolio">
+    <div class="title-container">
+        <div class="title-background"></div>
+        <h2 class="portfolio-section-title">Our Portfolio</h2>
+        <div class="title-underline">
+            <div class="underline-segment"></div>
+            <div class="underline-dot"></div>
+            <div class="underline-segment"></div>
+        </div>
+        <p class="portfolio-section-subtitle">Excellence in every project</p>
+    </div>
+    
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="concrete.jpeg" alt="Concrete Construction" class="portfolio-img">
+            <p class="portfolio-title">CONCRETE CONSTRUCTION</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="asphalt.jpeg" alt="Asphalt Paving" class="portfolio-img">
+            <p class="portfolio-title">ASPHALT PAVING</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="asphalt_equipment.jpeg" alt="Asphalt Equipment" class="portfolio-img">
+            <p class="portfolio-title">ASPHALT EQUIPMENT</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="bridge.jpeg" alt="Bridge Construction" class="portfolio-img">
+            <p class="portfolio-title">BRIDGE CONSTRUCTION</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="road.jpeg" alt="Road Construction" class="portfolio-img">
+            <p class="portfolio-title">ROAD CONSTRUCTION</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="inspect.jpeg" alt="Site Inspection" class="portfolio-img">
+            <p class="portfolio-title">SITE INSPECTION</p>
+        </div>
+    </div>
+</div>
+
+<div class="testimonials-section" id="testimonials">
+    <h2 class="testimonials-title">Client Testimonials</h2>
+    
+    <div class="testimonials-grid">
+        <div class="testimonial-item">
+            <div class="testimonial-divider"></div>
+            <p class="testimonial-text">"Their construction supervision and management services were invaluable to our project's success. Their team's expertise and attention to detail ensured that everything was executed flawlessly, on time, and within budget. Their ability to solve problems on-site was truly impressive. Highly recommend their services!"</p>
+            <p class="testimonial-author">Laura</p>
+        </div>
+        
+        <div class="testimonial-item">
+            <div class="testimonial-divider"></div>
+            <p class="testimonial-text">"The training program was a game-changer for our team! The hands-on approach and real-world scenarios helped our junior staff develop confidence and skills faster than we expected. They're now contributing meaningfully to projects, and we've seen a noticeable boost in productivity. Highly recommend this program to anyone looking to develop top-tier talent!"</p>
+            <p class="testimonial-author">Sarah T.</p>
+        </div>
+        
+        <div class="testimonial-item">
+            <div class="testimonial-divider"></div>
+            <p class="testimonial-text">"The adjudication service was a lifesaver for our materials testing process. Their experts meticulously reviewed our lab results, identified inconsistencies, and provided clear, unbiased conclusions. Their attention to detail and commitment to accuracy gave us complete confidence in the final outcome. We couldn't have asked for a more professional and reliable partner!"</p>
+            <p class="testimonial-author">Emily R.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Portfolio Section Title Styling - New styles */
+.title-container {
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+    padding: 20px 0;
+}
+
+.title-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(94, 206, 206, 0.1) 0%, rgba(0, 38, 66, 0) 70%);
+    border-radius: 50%;
+    animation: pulse-bg 4s infinite alternate;
+    z-index: 0;
+}
+
+.portfolio-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: title-reveal 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.title-underline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.underline-segment {
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, transparent, #5ecece);
+    animation: line-expand 1.5s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+.underline-segment:last-child {
+    background: linear-gradient(90deg, #5ecece, transparent);
+}
+
+.underline-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #5ecece;
+    border-radius: 50%;
+    margin: 0 15px;
+    transform: scale(0);
+    box-shadow: 0 0 15px rgba(94, 206, 206, 0.8);
+    animation: dot-appear 0.5s ease-out forwards;
+    animation-delay: 1.3s;
+}
+
+.portfolio-section-subtitle {
+    font-size: 1rem;
+    font-style: italic;
+    color: #5ecece;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    animation: subtitle-reveal 1.5s ease forwards;
+    animation-delay: 1s;
+    letter-spacing: 1px;
+}
+
+/* Animations for the title */
+@keyframes pulse-bg {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.6;
+    }
+}
+
+@keyframes title-reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes line-expand {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80px;
+    }
+}
+
+@keyframes dot-appear {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes subtitle-reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Portfolio section adjustments */
+.portfolio-section {
+    background-color: #003366;
+    padding: 80px 50px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Responsive styles for portfolio items */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Change to single column */
+    }
+    
+    .portfolio-item {
+        width: 100%; /* Ensure full width */
+    }
+    
+    .portfolio-img {
+        width: 100%; /* Make images full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    .portfolio-section {
+        padding: 60px 20px; /* Reduce padding */
+    }
+    
+    .portfolio-section-title {
+        font-size: 3rem; /* Smaller font size */
+    }
+    
+    .portfolio-section-subtitle {
+        font-size: 1.2rem; /* Smaller font size */
+    }
+}
+
+/* Responsive styles for testimonials */
+@media (max-width: 992px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    
+    .testimonial-item {
+        width: 100%; /* Ensure full width */
+        margin-bottom: 30px; /* Add space between stacked items */
+    }
+    
+    .testimonial-text {
+        font-size: 0.95rem; /* Slightly smaller text on mobile */
+    }
+    
+    .testimonials-title {
+        font-size: 2rem; /* Smaller title on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-section {
+        padding: 60px 20px; /* Reduce padding on very small screens */
+    }
+    
+    .testimonial-item {
+        padding: 25px 20px; /* Reduce padding inside testimonial boxes */
+    }
+}
+</style>
+
+<footer class="footer" id="contact">
+    <div class="footer-container">
+        <div class="footer-image">
+            <div class="footer-particles" id="footer-particles"></div>
+            <div class="footer-overlay"></div>
+        </div>
+        <div class="footer-content">
+            <h2 class="footer-heading animate-text">Build your future with us</h2>
+            
+            <div class="footer-separator">
+                <div class="separator-dot"></div>
+            </div>
+            
+            <div class="footer-info">
+                <div class="company-details animate-item">
+                    <div class="company-address">
+                        <p class="company-name">Makrim Enterprises</p>
+                        <p>133a Kempston Avenue,</p>
+                        <p>Benoni, 1501</p>
+                    </div>
+                </div>
+                
+                <div class="company-contact animate-item">
+                    <p class="contact-item"><span class="contact-icon">📞</span>Tel: +27 63 964 4699</p>
+                    <p class="contact-item"><span class="contact-icon">✉️</span>Email: technical@makrimenterprises.co.za</p>
+                    <p class="contact-item"><span class="contact-icon">📱</span>Whatsapp: +27 83 619 6423</p>
+                </div>
+            </div>
+            
+            <p class="footer-tagline animate-item">We practice Universal Design principles to help you build the best infrastructures.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* Footer Styles - Isolated with unique class names to avoid conflicts */
+    .footer {
+        width: 100%;
+        margin-top: 0;
+        position: relative;
+    }
+    
+    .footer-container {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+    
+    .footer-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('footer.jpeg');
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+    
+    .footer-particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+    
+    .footer-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+        z-index: 3;
+    }
+    
+    .footer-content {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        width: 500px;
+        max-width: 80%;
+        background-color: rgba(0, 38, 66, 0.9);
+        color: #d9c9a3;
+        padding: 50px 40px;
+        z-index: 4;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        border-radius: 3px;
+        border-left: 5px solid #d9c9a3;
+        animation: footer-slide-in 1s ease-out forwards;
+        opacity: 0;
+    }
+    
+    @keyframes footer-slide-in {
+        0% {
+            opacity: 0;
+            transform: translate(-50px, -50%);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0, -50%);
+        }
+    }
+    
+    .footer-heading {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: normal;
+        color: #d9c9a3;
+        font-family: 'Playfair Display', serif;
+        position: relative;
+    }
+    
+    .animate-text {
+        background: linear-gradient(to right, #d9c9a3, #ffffff, #d9c9a3);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: 200% auto;
+        animation: footer-shine 3s linear infinite;
+    }
+    
+    @keyframes footer-shine {
+        to {
+            background-position: 200% center;
+        }
+    }
+    
+    .footer-separator {
+        position: relative;
+        width: 100px;
+        height: 2px;
+        background: linear-gradient(to right, #d9c9a3, transparent);
+        margin-bottom: 30px;
+        overflow: visible;
+    }
+    
+    .separator-dot {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: #d9c9a3;
+        border-radius: 50%;
+        animation: footer-pulse 2s infinite;
+    }
+    
+    @keyframes footer-pulse {
+        0% {
+            transform: translateY(-50%) scale(1);
+            box-shadow: 0 0 0 0 rgba(217, 201, 163, 0.7);
+        }
+        70% {
+            transform: translateY(-50%) scale(1.2);
+            box-shadow: 0 0 0 10px rgba(217, 201, 163, 0);
+        }
+        100% {
+            transform: translateY(-50%) scale(1);
+            box-shadow: 0 0 0 0 rgba(217, 201, 163, 0);
+        }
+    }
+    
+    .footer-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    
+    .company-name {
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    
+    .company-address p, .contact-item {
+        margin: 8px 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        transition: all 0.3s ease;
+        position: relative;
+        padding-left: 5px;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        transform-origin: left;
+    }
+    
+    .contact-item:hover {
+        transform: scale(1.05);
+        color: #ffffff;
+    }
+    
+    .contact-icon {
+        margin-right: 10px;
+        font-size: 1.1rem;
+    }
+    
+    .footer-tagline {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-top: 20px;
+        font-style: italic;
+        border-top: 1px solid rgba(217, 201, 163, 0.3);
+        padding-top: 20px;
+    }
+    
+    .animate-item {
+        opacity: 0;
+        animation: footer-fade-up 0.8s ease-out forwards;
+    }
+    
+    .company-details {
+        animation-delay: 0.3s;
+    }
+    
+    .company-contact {
+        animation-delay: 0.6s;
+    }
+    
+    .footer-tagline {
+        animation-delay: 0.9s;
+    }
+    
+    @keyframes footer-fade-up {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .footer-content {
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            animation: footer-slide-in-center 1s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes footer-slide-in-center {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -30%);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+        
+        .footer-info {
+            flex-direction: column;
+        }
+        
+        .company-contact {
+            margin-top: 20px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .footer-container {
+            height: auto;
+        }
+        
+        .footer-image {
+            position: relative;
+            height: 300px;
+        }
+        
+        .footer-content {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+            width: 100%;
+            max-width: 100%;
+            padding: 40px 30px;
+            animation: footer-fade-in 1s ease-out forwards;
+        }
+        
+        @keyframes footer-fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        .footer-heading {
+            font-size: 2rem;
+        }
+    }
+</style>
+
+<script>
+    // Footer animations script - isolated to avoid conflicts
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if particles.js is available
+        if (typeof particlesJS !== 'undefined') {
+            // Initialize particles for the footer
+            particlesJS("footer-particles", {
+                "particles": {
+                    "number": {
+                        "value": 30,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#d9c9a3"
+                    },
+                    "shape": {
+                        "type": "circle"
+                    },
+                    "opacity": {
+                        "value": 0.3,
+                        "random": true
+                    },
+                    "size": {
+                        "value": 5,
+                        "random": true
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#d9c9a3",
+                        "opacity": 0.2,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    }
+                },
+                "retina_detect": true
+            });
+        } else {
+            console.log("particles.js not loaded - skipping particle effects");
+        }
+        
+        // Add animation classes to elements when they come into view
+        const footerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    footerObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        // Observe the footer content
+        const footerContent = document.querySelector('.footer-content');
+        if (footerContent) {
+            footerObserver.observe(footerContent);
+        }
+        
+        // Add hover effects to contact items
+        const contactItems = document.querySelectorAll('.contact-item');
+        contactItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.color = '#ffffff';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.color = '#d9c9a3';
+            });
+        });
+    });
+</script>
+
+<!-- Add particles.js if not already included -->
+<script>
+    // Check if particles.js is already loaded
+    if (typeof particlesJS === 'undefined') {
+        // Create script element
+        const particlesScript = document.createElement('script');
+        particlesScript.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+        particlesScript.onload = function() {
+            // Initialize particles once loaded
+            if (document.getElementById('footer-particles')) {
+                particlesJS("footer-particles", {
+                    "particles": {
+                        "number": {"value": 30},
+                        "color": {"value": "#d9c9a3"},
+                        "shape": {"type": "circle"},
+                        "opacity": {"value": 0.3, "random": true},
+                        "size": {"value": 5, "random": true},
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#d9c9a3",
+                            "opacity": 0.2,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 2,
+                            "direction": "none",
+                            "random": true
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {"enable": true, "mode": "grab"},
+                            "onclick": {"enable": true, "mode": "push"}
+                        }
+                    }
+                });
+            }
+        };
+        document.head.appendChild(particlesScript);
+    }
+</script>
+
+<style>
+/* Vertical Navigation Styles */
+.side-nav {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: all 0.4s ease;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30px 0 0 30px;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+.nav-item {
+    margin: 5px 0;
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 25px 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 6px;
+    height: 6px;
+    background: #5ecece;
+    border-radius: 50%;
+    transform: translateY(-50%) scale(0);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #5ecece;
+    transform: translateX(-5px);
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+}
+
+.nav-link.active {
+    background: rgba(94, 206, 206, 0.1);
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1001;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #40E0D0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(64, 224, 208, 0.3);
+    transition: all 0.3s ease;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Ensure the toggle is visible on mobile */
+@media (max-width: 992px) {
+    .nav-toggle {
+        display: flex;
+    }
+}
+
+.nav-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(64, 224, 208, 0.5);
+}
+
+.nav-toggle.active {
+    background: #40E0D0;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+/* Add these responsive styles for the home container */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-section {
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .right-section {
+        display: none; /* Hide the right section on small screens */
+    }
+    
+   
+    
+    
+    /* Adjust text content for mobile */
+    .text-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsive Navigation */
+@media (max-width: 992px) {
+    .side-nav {
+        top: 0;
+        right: 0;
+        transform: translateY(0);
+        width: 100%;
+        height: auto;
+        align-items: flex-end;
+    }
+    
+    .nav-toggle {
+        display: flex; /* Show hamburger on mobile */
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        border-radius: 0;
+        padding: 80px 0 30px;
+        align-items: flex-start;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-item {
+        width: 100%;
+    }
+    
+    .nav-link {
+        width: 100%;
+        padding: 15px 25px 15px 40px;
+    }
+    
+    .nav-link::before {
+        left: 20px;
+    }
+    
+    /* Hamburger animation */
+    .nav-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        width: 100%;
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 18px 25px 18px 40px;
+    }
+}
+
+/* Navigation indicator */
+.nav-indicator {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.indicator-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.indicator-dot.active {
+    background: #5ecece;
+    box-shadow: 0 0 10px rgba(94, 206, 206, 0.7);
+    transform: scale(1.3);
+}
+
+@media (max-width: 992px) {
+    .nav-indicator {
+        display: none;
+    }
+}
+</style>
+
+<!-- Add this script at the end of your body tag -->
+<script>
+    // Navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    
+    // Close menu when clicking a link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            
+            // Update active state
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+    
+    // Add navigation indicator dots
+    const sections = ['home', 'about', 'services', 'portfolio', 'testimonials', 'contact'];
+    const navIndicator = document.createElement('div');
+    navIndicator.className = 'nav-indicator';
+    
+    sections.forEach((section, index) => {
+        const dot = document.createElement('div');
+        dot.className = 'indicator-dot';
+        if (index === 0) dot.classList.add('active');
+        
+        dot.addEventListener('click', () => {
+            document.querySelector(`#${section}`).scrollIntoView({
+                behavior: 'smooth'
+            });
+            
+            // Update active state
+            document.querySelectorAll('.indicator-dot').forEach(d => d.classList.remove('active'));
+            dot.classList.add('active');
+            
+            // Update nav link active state
+            navLinks.forEach(l => l.classList.remove('active'));
+            navLinks[index].classList.add('active');
+        });
+        
+        navIndicator.appendChild(dot);
+    });
+    
+    document.body.appendChild(navIndicator);
+    
+    // Update active section on scroll
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        
+        sections.forEach((section, index) => {
+            const element = document.getElementById(section);
+            if (!element) return;
+            
+            const offsetTop = element.offsetTop - 100;
+            const offsetBottom = offsetTop + element.offsetHeight;
+            
+            if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+                // Update dots
+                document.querySelectorAll('.indicator-dot').forEach(dot => dot.classList.remove('active'));
+                document.querySelectorAll('.indicator-dot')[index].classList.add('active');
+                
+                // Update nav links
+                navLinks.forEach(link => link.classList.remove('active'));
+                navLinks[index].classList.add('active');
+            }
+        });
+    });
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
