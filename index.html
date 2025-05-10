@@ -2387,10 +2387,15 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   .contact-item, body .contact-item {
     display: flex !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     gap: 7px !important;
     font-size: 1rem !important;
     margin: 2px 0 !important;
+    justify-content: flex-start !important;
+  }
+  .contact-icon {
+    flex-shrink: 0 !important;
+    margin-right: 7px !important;
   }
   .footer-tagline, body .footer-tagline {
     color: #b2e6e6 !important;
@@ -2498,31 +2503,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
